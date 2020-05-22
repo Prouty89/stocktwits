@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Navbar, Nav, Form, FormControl, Button, ListGroup} from 'react-bootstrap';
+import AsyncExample from './components/Search';
 
 function App() {
   return (
@@ -14,10 +15,7 @@ function App() {
                   <Nav.Link href="https://github.com/Prouty89/stocktwits" target="__blank">Codebase</Nav.Link>
                   <Nav.Link href="https://api.stocktwits.com/developers" target="__blank">API Reference</Nav.Link>
               </Nav>
-              <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-success">Search</Button>
-              </Form>
+             <AsyncExample />
           </Navbar.Collapse>
         </Navbar>
       </header>
