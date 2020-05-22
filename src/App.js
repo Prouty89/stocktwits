@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { Navbar, Nav, Form, FormControl, Button, ListGroup} from 'react-bootstrap';
-import AsyncExample from './components/Search';
+import { Navbar, Nav, ListGroup} from 'react-bootstrap';
+import Search from './components/Search';
+
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
                   <Nav.Link href="https://github.com/Prouty89/stocktwits" target="__blank">Codebase</Nav.Link>
                   <Nav.Link href="https://api.stocktwits.com/developers" target="__blank">API Reference</Nav.Link>
               </Nav>
-             <AsyncExample />
+             <Search />
           </Navbar.Collapse>
         </Navbar>
       </header>
