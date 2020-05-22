@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useState } from 'react';
 import AppReducer from './AppReducer';
 
 import axios from 'axios';
@@ -25,7 +25,7 @@ export const GlobalProvider = ({ children }) => {
         })
     }
 
-    //Fetch Tweets provided 
+    //Fetch Tweets when provided with cashtags from search submit. 
     function pullTweets(tweet) {
         dispatch({
             type: 'PULL_TWEETS',
