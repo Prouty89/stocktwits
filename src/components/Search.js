@@ -20,40 +20,29 @@ const Search = () => {
 });
 
 const handleSubmit = () => {
-const cashtags = selected.map(selection => selection.symbol);
-let links = new Array(cashtags.length).fill(`${PROXY}https://api.stocktwits.com/api/2/streams/symbol/${cashtags}.json`)
-console.log("links", links)
 
-// var columns = ["Date", "Number", "Size", "Location", "Age"];
-// var rows = ["2001", "5", "Big", "Sydney", "25"];
-// var result =  rows.reduce(function(result, field, index) {
-//   result[columns[index]] = field;
-//   return result;
-// }, {})
+// iterate over the selected stocks for our next API call (returning data for each symbol selected)
+const cashtags = selected.map(selection => selection.symbol)
 
-// console.log(result);
-let joinArr = links.reduce(function(joinArr, field, index) {
-    joinArr[cashtags[index]] = field;
-    return joinArr
+
+// initialize empty array that will hold our unique links for axios.all requests
+let dynamicLinks = [];
+
+// iterate over the cashtags array and push a link containing a unique cashtag to the dynamicLinks array.
+cashtags.forEach(function(cashtag){
+    dynamicLinks.push(`${PROXY}https://api.stocktwits.com/api/2/streams/symbol/${cashtag}.json`)
 })
-console.log("joined",joinArr);
-for ( const [index, cashtag] of cashtags.entries() ) {
-    console.log(`${cashtag}`)
-}
-axios.all(links.map(link => axios.get(link)))
+
+console.log("dynamicLinks",dynamicLinks);
+
+axios.all(dynamicLinks.map(link => axios.get(link)))
 .then(axios.spread(function (...res) {
     console.log("response", res);
-    {console.log("cashtags length", cashtags)}
+    {console.log("cashtags", cashtags)}
+    console.log("from", Array.from(dynamicLinks))
 }));
 };
 
-
-//  const handleSubmit = () => {
-//      const cashtags = selected.map(selection => selection.symbol);
-//      fetch(`${PROXY}https://api.stocktwits.com/api/2/streams/symbol/${cashtags}.json`)
-//      .then(response => response.json())
-//      .then(data => console.log("data", data))
-//  };
 
   return (
       <>
