@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { Navbar, Nav, ListGroup} from 'react-bootstrap';
+import { Navbar, Nav} from 'react-bootstrap';
 import Search from './components/Search';
+import TweetDeck  from './components/TweetDeck';
+import { GlobalProvider } from './context/GlobalState';
+
+
 
 
 function App() {
+
+
+
   return (
+    <GlobalProvider>
     <div className="App">
       <header>
         <Navbar expand="lg" variant="dark" bg="dark">
@@ -21,15 +29,10 @@ function App() {
         </Navbar>
       </header>
       <div className="container">
-      <ListGroup>
-        <ListGroup.Item>Cras justo</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-        <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-      </ListGroup>
-      </div>
+        <TweetDeck />
     </div>
+    </div>
+    </GlobalProvider>
   );
 }
 
