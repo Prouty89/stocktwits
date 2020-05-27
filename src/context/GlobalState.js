@@ -5,7 +5,7 @@ import AppReducer from './AppReducer';
 // Create initial state
 
 const initialState = {
-    tweets: {}
+    tweets: []
 }
 
 // Create context
