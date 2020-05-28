@@ -7,7 +7,6 @@ import AppReducer from './AppReducer';
 const initialState = {
     tweets: []
 }
-
 // Create context
 
 export const GlobalContext = createContext(initialState);
