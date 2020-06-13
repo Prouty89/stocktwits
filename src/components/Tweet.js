@@ -1,36 +1,35 @@
-import React, { useContext } from 'react';
+import React from "react";
 
-import { GlobalContext } from '../context/GlobalState';
 
-import { ListGroup, Card} from 'react-bootstrap';
+import { ListGroup, Card } from "react-bootstrap";
 
 const TweetCard = (symbol) => {
-    // const { tweets } = useContext(GlobalContext);
+  const cardTitle = symbol.title.symbol.symbol;
 
-    // const tweetData = tweets.map((data) =><Card.Body key={data.id} data={data}> {data.symbol.symbol}</Card.Body>)
-    // const tweetMessages = tweets.map((m) => m.messages)
+  const messages = symbol.title.messages;
 
-    return (
-        <>
+  const bodies = [];
 
-        <Card style={{ width: '18rem' }}>
-        {console.log( symbol.title.symbol.symbol, "sym")}
-        {/* {console.log("TWEETS", tweetData)} */}
-        <Card.Text>
-        { symbol.title.symbol.symbol }
-        </Card.Text>
-        <ListGroup className="list-group-flush">
-    {/* {console.log(tweetMessages)} */}
-        </ListGroup>
+  for (const [index, value] of messages.entries()) {
+    bodies.push(
+      <ListGroup className="list-group-flush" key={index}>
+        {value.body}
+      </ListGroup>
+    );
+  }
+
+  return (
+    <>
+      <Card style={{ width: "18rem" }}>
+        <Card.Text>{cardTitle}</Card.Text>
+        {bodies}
         <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+          <Card.Link href="#">Card Link</Card.Link>
+          <Card.Link href="#">Another Link</Card.Link>
         </Card.Body>
-        </Card>
-
-        </>
-
-    )
+      </Card>
+    </>
+  );
 };
 
 export default TweetCard;
