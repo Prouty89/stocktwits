@@ -1,14 +1,17 @@
 export default (state, action) => {
 
     switch(action.type) {
-
-       
-        case 'ADD_TWEETS':
+        case 'ADD_SYMBOLS':
             return{
                 ...state,
-                tweets: action.payload, ...state.tweets 
+                symbols: action.payload, ...state.symbols
             }
+        case 'ADD_MESSAGES':
+        return{
+            ...state,
+            messages: action.payload, ...state.messages
+        }
         default:
-            return state;
+        return state;
     }
 }
