@@ -16,3 +16,7 @@ code {
   width: 325px;
   margin-right: 5px;
 }
+
+.container{
+  display: flex;
+}
