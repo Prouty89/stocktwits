@@ -6,7 +6,6 @@ import AppReducer from './AppReducer';
 
 const initialState = {
     symbols: [],
-    messages: []
 }
 // Create context
 
@@ -24,19 +23,12 @@ export const GlobalProvider = ({ children }) => {
             payload: symbol
         })
     }
-    function addMessages(message) {
-        dispatch({
-            type: 'ADD_MESSAGES',
-            payload: message
-        })
-    }
+
     
     return(
     <GlobalContext.Provider value={{ 
         symbols: state.symbols,
-        messages: state.messages,
         addSymbols,
-        addMessages,
         }}>
         {children}
     </GlobalContext.Provider>

@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Navbar, Nav} from 'react-bootstrap';
 import Search from './components/Search';
 import TweetDeck  from './components/TweetDeck';
@@ -17,7 +16,7 @@ function App() {
     <div className="App">
       <header>
         <Navbar expand="lg" variant="dark" bg="dark">
-          <Navbar.Brand>Stock Tweets</Navbar.Brand>
+          <Navbar.Brand>Stock Messages</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

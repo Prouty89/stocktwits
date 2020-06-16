@@ -3,7 +3,7 @@ import React from "react";
 import { ListGroup, Card, Badge } from "react-bootstrap";
 
 const TweetCard = (symbol) => {
-    
+
   const stockSymbol = symbol.title.symbol.symbol;
   const stockName = symbol.title.symbol.title;
   const messages = symbol.title.messages;
@@ -37,14 +37,14 @@ const TweetCard = (symbol) => {
   return (
     <>
       <Card
-        style={{ width: "23rem", padding: 10, margin: 5 }}
-        bg={"primary"}
+        style={{ width: "23rem", padding: 10, margin: 15, marginTop: 30 }}
+        bg={"dark"}
         className="mb-2"
         border="dark"
         text="white"
       >
-        <Card.Header>
-          {stockName} (${stockSymbol})
+        <Card.Header style={{textAlign: 'center'}}>
+          {stockName} (${stockSymbol}), {' '}{bodies.length} Messages
         </Card.Header>
         <ListGroup style={{ overflowY: "overlay", maxHeight: 500 }}>
           {bodies}
