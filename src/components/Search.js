@@ -7,7 +7,7 @@ import axios from 'axios';
 
 import 'react-bootstrap-typeahead/css/Typeahead.css';
 
-//Mitigate CORS issues, see https://cors-anywhere.herokuapp.com/
+// Mitigate CORS issues, see https://cors-anywhere.herokuapp.com/
 const PROXY = 'https://cors-anywhere.herokuapp.com/';
 
 const Search = () => {
@@ -17,7 +17,7 @@ const Search = () => {
   // User-selected input for API requests
   const [selected, setSelected] = useState([]);
 
-  //Everything search bar! See AsyncTypeahead component, where filter (query) can be a symbol or company title.
+  // Everything search bar! See AsyncTypeahead component, where filter (query) can be a symbol or company title.
   async function handleSearch(query) {
     await fetch(
       `${PROXY}https://api.stocktwits.com/api/2/search/symbols.json?&q=${query}`
@@ -50,6 +50,7 @@ const Search = () => {
   // on update or deletion our associated Symbol data will respond at the dom level.
   useEffect(() => {
     handleQuery();
+    // eslint-disable-next-line
   }, [selected]);
 
   return (
