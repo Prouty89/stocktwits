@@ -6,11 +6,6 @@ export default (state, action) => {
                 ...state,
                 symbols: action.payload, ...state.symbols
             }
-        case 'ADD_MESSAGES':
-        return{
-            ...state,
-            messages: action.payload, ...state.messages
-        }
         default:
         return state;
     }
