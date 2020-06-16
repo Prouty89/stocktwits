@@ -26,3 +26,15 @@ code {
 .tweet-text{
   color: black;
 }
+
+.alert-heading{
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.fade{
+  width: 600px;
+  margin-top: 20px;
+}
+
