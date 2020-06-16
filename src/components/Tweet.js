@@ -17,6 +17,7 @@ const TweetCard = (symbol) => {
           <a
             href={`https://stocktwits.com/${value.user.username}`}
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Card.Link>@{value.user.username}</Card.Link>
           </a>

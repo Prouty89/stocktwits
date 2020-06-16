@@ -19,7 +19,7 @@ const TweetDeck = () => {
                 </p>
                 <hr />
                 <p className="mb-0">
-                A single request will return up to 30 messages, showing the most recent first. Clicking on the @user link will bring you to the associated profile on <a href="https://stocktwits.com/">Stocktwits.com</a>
+                A single request will return up to 30 messages, showing the most recent first. Clicking on the @user link will bring you to the associated profile on <a href="https://stocktwits.com/" rel="noopener noreferrer" target="_blank">Stocktwits.com</a>
                 </p>
                 <hr />
                 <p className="mb-0">
