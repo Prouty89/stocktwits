@@ -12,36 +12,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-# Frontend Engineer Challenge
-## Using React and any available libraries, create a simple application using the StockTwits API.
-Hint: you will need to have a separate backend to handle CORS.  
-● Allow the user to input a US stock symbol or several symbols (eg: AAPL, BABA, BAC,
-etc…)   
+[![Netlify Status](https://api.netlify.com/api/v1/badges/54294326-a08c-4ee3-8440-cc78845d5e77/deploy-status)](https://app.netlify.com/sites/stockmessages/deploys)
 
-● Pull tweets from StockTwits that mention this symbol (stock symbols usually have a $
-before them, like: $AAPL, $BABA, etc…)  
+![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
+![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-● Display the latest matching tweets. How you display them is up to you.    
+### Stock Messages Task List:
+[X] Allow the user to input a US stock symbol or several symbols (eg: AAPL, BABA, BAC, etc…) 
+[X] Pull tweets from StockTwits that mention this symbol
+[X] Display the latest matching tweets
+[X] The user should be able to later add/remove symbols as well. If a user deletes a symbol, the matching tweets should also disappear.
+[X] Responsive
+[X] Represent the number of messages for a given symbol
+[X] Project is hosted
 
-● When a new tweet comes in, it should automatically be added without having to refresh
-the page.   
+### TODO:
 
-● The user should be able to later add/remove symbols as well. If a user deletes a symbol,
-the matching tweets should also disappear. 
-
-● The page has to be responsive. 
-
-● The number of tweets for a given symbol needs to be represented.  
-
-● Pay attention to details and make the user-interface and user-experience the best you
-possibly can, considering time constraints. 
-
-● Treat it like a real project, so things like code structure, readability, reusability… should
-be taken into consideration.
-
-Code for this assignment needs to be hosted on GitHub and a working version must be
-accessible via web.
-Important note: you will not be judged on your design skills but make sure the presentation
-of your project is clean and well organized. Feel free to use any UI libraries, like Material-UI
-or Bootstrap.
-
+[] Read me improve
+[] Pagination, or better message collection display
+[] Data persistence, e.g. on refresh
