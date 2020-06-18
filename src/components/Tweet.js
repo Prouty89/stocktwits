@@ -4,11 +4,12 @@ import { ListGroup, Card, Badge } from "react-bootstrap";
 
 const TweetCard = (symbol) => {
 
-  const stockSymbol = symbol.title.symbol.symbol;
-  const stockName = symbol.title.symbol.title;
-  const messages = symbol.title.messages;
-  const bodies = [];
+  const stockSymbol = symbol.stock.symbol.symbol;
+  const stockName = symbol.stock.symbol.title;
+  const messages = symbol.stock.messages;
 
+  // messages is an array of indexed objects, we want to target the "body" value and push it to the bodies array. 
+  const bodies = [];
   for (const [index, value] of messages.entries()) {
     bodies.push(
       <ListGroup.Item variant="light" key={index}>
@@ -31,6 +32,7 @@ const TweetCard = (symbol) => {
           </footer>
         </blockquote>
         {""}
+        {console.log(bodies, "bodies")}
       </ListGroup.Item>
     );
   }

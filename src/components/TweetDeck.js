@@ -10,7 +10,7 @@ const TweetDeck = () => {
     return (
         <>
             { symbols.length > 0 ? (
-            symbols.map(title => <TweetCard key={title.id} title={title}/>)
+            symbols.map(stock => <TweetCard key={stock.id} stock={stock}/>)
             ) : 
             <Alert variant="dark">
                 <Alert.Heading>Welcome to Stock Messages</Alert.Heading>
