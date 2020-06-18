@@ -27,6 +27,8 @@ const Search = () => {
   }
 
   async function handleQuery() {
+    //Create new Array called links, fill it with unique links from user selection!
+    //Fullfil all requests, map over responses, addSymbols function will send response objects to context provider. 
     let links = [];
     const cashtags = selected.map((selection) => selection.symbol);
     cashtags.forEach(function (cashtag) {
@@ -44,7 +46,7 @@ const Search = () => {
         );
       })
     );
-    console.log("BLINKS", links);
+    console.log("links", links);
   }
 
   // on update or deletion our associated Symbol data will respond at the dom level.
