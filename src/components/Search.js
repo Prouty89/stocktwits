@@ -40,13 +40,8 @@ const Search = () => {
       axios.spread(function (...res) {
         const responses = res.map((response) => response.data);
         addSymbols(responses.map((data) => data));
-        console.log(
-          "ResponseData",
-          responses.map((data) => data)
-        );
       })
     );
-    console.log("links", links);
   }
 
   // on update or deletion our associated Symbol data will respond at the dom level.
@@ -73,11 +68,10 @@ const Search = () => {
         selected={selected}
         options={options}
         onSearch={handleSearch}
-        placeholder="Enter cashtag or company name.."
+        placeholder="Enter symbol or company name.."
         renderMenuItemChildren={(option) => (
           <div>
             <Button
-              onClick={() => console.log("clicked", option.symbol)}
               variant="link"
             >
               {option.title}
