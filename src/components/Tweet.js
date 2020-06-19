@@ -32,7 +32,6 @@ const TweetCard = (symbol) => {
           </footer>
         </blockquote>
         {""}
-        {console.log(bodies, "bodies")}
       </ListGroup.Item>
     );
   }
